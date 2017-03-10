@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mule-app:
+    image: semprini/mule-docker-compose
+    volumes:
+    - /opt/mule/apps
+    - /opt/mule/conf
+    - /opt/mule/domains
+    - /opt/mule/logs
