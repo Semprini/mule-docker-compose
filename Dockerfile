@@ -12,7 +12,7 @@ RUN cd ~ && wget https://repository-master.mulesoft.org/nexus/content/repositori
 RUN cd /opt && tar xvzf ~/mule-standalone-3.8.0.tar.gz && rm ~/mule-standalone-3.8.0.tar.gz && ln -s /opt/mule-standalone-3.8.0 /opt/mule
 
 # nexus containing apps artifact
-RUN wget --no-check-certificate $MULE_APPS_ARCHIVE
+RUN wget --no-check-certificate -o $MULE_APPS_DEST $MULE_APPS_ARCHIVE
 #RUN unzip ${MULE_APPS_DEST}
 RUN cp $MULE_APPS_DEST /opt/mule/apps/
 
